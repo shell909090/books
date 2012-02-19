@@ -1,3 +1,4 @@
+(use-modules (srfi srfi-1))
 (define (get-symbol x) (car x))
 (define (get-weight x) (cadr x))
 (define (make-subtree left right)
@@ -22,4 +23,6 @@
       l
       (list-to-huffman (step-to-huffman l)))
   )
-(list-to-huffman '((b 2) (e 10) (c 5) (a 1) (d 6)))
+(display
+ (list-to-huffman '((b 2) (e 10) (c 5) (a 1) (d 6))))
+(newline)

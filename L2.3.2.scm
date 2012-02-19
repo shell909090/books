@@ -32,4 +32,6 @@
 (define (product? x) (and (pair? x) (eq? (car x) '*)))
 (define (multiplier p) (cadr p))
 (define (multipliend p) (caddr p))
-(deriv '(* (* x y) (+ x 3)) 'x)
+(display
+ (deriv '(* (* x y) (+ x 3)) 'x))
+(newline)

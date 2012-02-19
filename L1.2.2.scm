@@ -15,4 +15,5 @@
         ((= kinds-of-coins 3) 10)
         ((= kinds-of-coins 4) 25)
         ((= kinds-of-coins 5) 50)))
-(count-change 100)
+(display (count-change 100))
+(newline)

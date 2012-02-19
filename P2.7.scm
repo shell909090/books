@@ -76,4 +76,6 @@
   (cons (mul-interval (add-interval r1 r2) r3)
 	(add-interval (mul-interval r1 r3) (mul-interval r2 r3)))
   )
-(comp (make-interval 5 10) (make-interval -7 20) (make-interval -2 -1))
+(display
+ (comp (make-interval 5 10) (make-interval -7 20) (make-interval -2 -1)))
+(newline)
