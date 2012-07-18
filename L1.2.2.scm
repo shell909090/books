@@ -1,3 +1,5 @@
+;; 树形递归一节，换零钱方式的统计问题
+;; 1, 5, 10, 25, 50的硬币，将1美元换成零钱，总共多少中不同的换法
 (define (count-change amount)
   (cc amount 5))
 (define (cc amount kinds-of-coins)

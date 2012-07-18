@@ -1,3 +1,4 @@
+;; 求导程序，对表达式求导
 (define (deriv exp var)
   ;; (display exp) (newline)
   (cond ((number? exp) 0)

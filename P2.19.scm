@@ -1,0 +1,13 @@
+(define (cmp-list l1 l2)
+  (cond ((and (null? l1) (null? l2)) #t)
+	((or (null? l1) (null? l2)) #f)
+	((= (car l1) (car l2)) (cmp-list (cdr l1) (cdr l2)))))
+;; 兑换硬币问题的解法，属于0-1背包问题
+(define (count-change amount coins)
+  (cond ((= amount 0) 1)
+        ((or (< amount 0) (null? coins)) 0)
+        (else (+ (count-change amount (cdr coins))
+                 (count-change (- amount (car coins)) coins)))
+        ))
+(display (count-change 100 '(1 5 10 25 50)))
+(newline)
