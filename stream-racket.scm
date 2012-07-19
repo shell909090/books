@@ -36,9 +36,9 @@
 (define (stream-map-0 f . stream-list)
   (if (stream-empty? (car stream-list)) '()
       (stream-cons
-       (apply f (map car stream-list))
-       (apply stream-map-0 (cons proc (map cdr stream-list))))
-      ))
+       (apply f (map stream-first stream-list))
+       (apply stream-map-0
+	      (cons f (map stream-rest stream-list))))))
 ;; racket根本不支持stream-map多参数
 (stream-display
  (stream-map (lambda (x) (* x x))
