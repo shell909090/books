@@ -47,7 +47,7 @@
 (define (stream-map-0 f . stream-list)
   (make-stream
    (lambda (x)
-     (if (stream-null? x) '()
+     (if (stream-null? (car x)) '()
 	 (cons (apply f (map stream-car x))
 	       (map stream-cdr x))))
    stream-list))
