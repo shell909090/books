@@ -1,0 +1,12 @@
+###  README --- /home/shell/workspace/verctl/sicp/
+
+## Copyright 2012 shell
+##
+## Author: shell@shell-deb.shdiv.qizhitech.com
+## Keywords: 
+
+L为课程代码，P为练习代码，后面的序列为书本上的编号。
+
+代码在guile2.0下测试通过。不过根据八皇后问题的测试，racket执行速度比guile快三倍以上。
+
+目前完成第二章部分题目，部分不值得做的跳过。
