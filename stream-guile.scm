@@ -31,6 +31,8 @@
 
 (format #t "prime list:~%")
 ;; 可以证明，make-stream和stream-cons是等效的
+;; 更精确的说，可以通过stream-cons来实现make-stream
+;; 反过来我还没想出怎么实现
 (define (stream-filter p s)
   (define (inner x)
     (cond ((stream-null? x)

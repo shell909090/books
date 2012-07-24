@@ -25,3 +25,7 @@
   (if (>= a b)
       (list b)
       (cons a (enumerate-interval (+ a 1) b))))
+
+(define (display-line x)
+  (display x)
+  (newline))
