@@ -1,7 +1,7 @@
 (require racket/promise)
 (load "common.scm")
 
-(define (display-for-each s)
+(define (display-stream s)
   (stream-for-each display-line s))
 
 (define (stream-enumerate-interval begin end)

@@ -1,3 +1,4 @@
+(load "common.scm")
 ;; 求导程序，对表达式求导
 (define (deriv exp var)
   ;; (display exp) (newline)
@@ -33,6 +34,5 @@
 (define (product? x) (and (pair? x) (eq? (car x) '*)))
 (define (multiplier p) (cadr p))
 (define (multipliend p) (caddr p))
-(display
+(display-line
  (deriv '(* (* x y) (+ x 3)) 'x))
-(newline)

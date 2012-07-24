@@ -1,3 +1,4 @@
+(load "common.scm")
 ;; huffman编码树
 (use-modules (srfi srfi-1))
 (define (get-symbol x) (car x))
@@ -24,5 +25,5 @@
   (if (= (length l) 1)
       l
       (list-to-huffman (step-to-huffman l))))
-(display (get-symbol (car (list-to-huffman '((b 2) (e 10) (c 5) (a 1) (d 6))))))
-(newline)
+(display-line
+ (get-symbol (car (list-to-huffman '((b 2) (e 10) (c 5) (a 1) (d 6))))))
